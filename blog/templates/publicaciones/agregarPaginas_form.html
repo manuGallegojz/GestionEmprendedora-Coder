@@ -1,0 +1,49 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+
+<div class="container d-flex justify-content-center">
+    <div class="col-8 p-3">
+        <div class="border rounded p-3">
+            <div class="col-12 sanserif">
+
+                <h4 class="serif mb-3">Agregar Publicación</h4>
+
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <div class="form-group">
+
+                <label for="titulo">Imagen:</label>
+                <input class="form-control" type="file" name="imagen" id="imagen" value="{{publicaciones.imagen}}">
+                <small class="mb-3 d-block">Se recomienda que la imagen debe ser de 400px x 300px para que se visualice correctamente.</small>
+            
+                <label for="titulo">Titulo:</label>
+                <input class="form-control mb-3" type="text" name="titulo" id="titulo" value="{{publicaciones.titulo}}">
+            
+                <label for="subtitulo">Subtitulo:</label>
+                <input class="form-control mb-3" type="text" name="subtitulo" id="subtitulo" value="{{publicaciones.subtitulo}}">
+            
+                <label for="cuerpo">Cuerpo del Mensaje:</label>
+                <textarea class="form-control mb-3" type="text" name="cuerpo" id="cuerpo" value="{{publicaciones.cuerpo}}"></textarea>
+            
+                <label for="emautorail">Autor:</label>
+                <input class="form-control mb-3" type="text" name="autor" id="autor" value="{{publicaciones.autor}}">
+            
+                <label for="fecha">Fecha:</label>
+                <input class="form-control mb-3" type="text" name="fecha" id="fecha" value="{{publicaciones.fecha}}">
+
+                </div>
+            
+                <button class="btn btn-primary mt-3 mb-2">
+                    Enviar
+                </button>
+
+                <button class="btn btn-primary mt-3 mb-2"><a class="text-decoration-none text-white" href="{% url 'paginasEditar' %}">Volver</a></button>
+            </form>
+
+        </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

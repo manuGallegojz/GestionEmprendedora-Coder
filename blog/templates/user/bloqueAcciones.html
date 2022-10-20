@@ -1,0 +1,134 @@
+{% load static %}
+
+<div class="col-md-9 col-12 p-3 rounded">
+    <div class="border rounded p-4">
+
+        <div class="d-flex flex-wrap">
+
+            <div class="col-md-6 p-3 rounded escala">
+
+                <button class="btn shadow-none">
+
+                <a href="{% url 'logout' %}" class="text-decoration-none">
+
+                <div class="border rounded p-3 d-flex flex-row align-items-center">
+                    <div class="col-3">
+                        <img class="w-100 rounded-circle" src="{% static 'imagenes/icons/icons-01.svg' %}" alt="imagen de perfil">
+                    </div>
+                    <div class="ms-4 text-start col-8">
+                        <h3 class="serif verde">Cerrar Sesión</h3>
+                        <p class="sanserif text-body"> Salir de tu cuenta implica tener que iniciar sesión luego. </p>
+                    </div>
+                </div>
+
+                </a>
+
+                </button>
+
+            </div>
+
+            <div class="col-md-6 p-3 rounded escala">
+
+                <button class="btn shadow-none">
+
+                <a href="{% url 'agregarAvatar' %}" class="text-decoration-none">
+
+                    <div class="border rounded p-3 d-flex flex-row align-items-center">
+                        <div class="col-3">
+                            <img class="w-100 rounded-circle" src="{% static 'imagenes/icons/icons-02.svg' %}" alt="imagen de perfil">
+                        </div>
+                        <div class="ms-4 text-start col-8">
+                            <h3 class="serif verde">Agregar Avatar</h3>
+                            <p class="sanserif text-body"> Agrega o edita tu propio avatar! </p>
+                        </div>
+                    </div>
+
+                </a>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        {% if usuario.username == "manuelgallego" %}
+
+        <div class="p-3">  
+
+            <h2 class="serif">Herramientas de Desarrollador</h2>
+
+        </div>
+
+        <div class="d-flex flex-wrap">
+
+            <div class="col-md-6 p-3 rounded escala">
+
+                <button class="btn shadow-none">
+
+                <a href="{% url 'paginasEditar' %}" class="text-decoration-none">
+
+                <div class="border rounded p-3 d-flex flex-row align-items-center">
+                    <div class="col-3">
+                        <img class="w-100 rounded-circle" src="{% static 'imagenes/icons/icons-04.svg' %}" alt="imagen de perfil">
+                    </div>
+                    <div class="ms-4 text-start col-8">
+                        <h3 class="serif verde">Publicaciones</h3>
+                        <p class="sanserif text-body"> Editar, eliminar o agregar las publicaciones del blog.</p>
+                    </div>
+                </div>
+
+                </a>
+
+                </button>
+
+            </div>
+
+            <div class="col-md-6 p-3 rounded escala">
+
+                <button class="btn shadow-none">
+
+                <a href="{% url 'editarUsuarios' %}" class="text-decoration-none">
+
+                <div class="border rounded p-3 d-flex flex-row align-items-center">
+                    <div class="col-3">
+                        <img class="w-100 rounded-circle" src="{% static 'imagenes/icons/icons-05.svg' %}" alt="imagen de perfil">
+                    </div>
+                    <div class="ms-4 text-start col-8">
+                        <h3 class="serif verde">Ver Usuarios</h3>
+                        <p class="sanserif text-body"> Ver los usuarios registrados, poder editarlos y eliminarlos.</p>
+                    </div>
+                </div>
+                </button>
+
+                </a>
+
+
+            </div>
+
+            <div class="col-md-6 p-3 rounded escala">
+
+                <a href="{% url 'misMensajes' %}" class="text-decoration-none">
+
+                <button class="btn shadow-none">
+                <div class="border rounded p-3 d-flex flex-row align-items-center">
+                    <div class="col-3">
+                        <img class="w-100 rounded-circle" src="{% static 'imagenes/icons/icons-03.svg' %}" alt="imagen de perfil">
+                    </div>
+                    <div class="ms-4 text-start col-8">
+                        <h3 class="serif verde">Ver Mensajes</h3>
+                        <p class="sanserif text-body"> Ver los mensajes para editarlos y eliminarlos. </p>
+                    </div>
+                </div>
+                </button>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        {%endif%}
+
+
+    </div>
+</div>

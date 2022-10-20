@@ -1,0 +1,44 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+
+<div class="container d-flex justify-content-center my-3">
+    <div class="col-5 p-3">
+        <div class=" p-3">
+            <div class="col-12 sanserif">
+
+                <form method="POST">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                    
+                        <label for="user">Nombre de Usuario</label>
+                        <input class="form-control mb-3" type="text" name="user" id="user">
+                    
+                        <label for="pass">Contraseña</label>
+                        <input class="form-control mb-3" type="password" name="pass" id="pass">
+
+                    </div>
+
+                    <button class="btn btn-primary mt-3 mb-2 col-12">
+                        Iniciar Sesión
+                    </button>
+                    
+                </form>
+                    
+                    <div class="d-flex justify-content-center">
+
+                        <hr class="mt-3 mb-0 bg-primary" style="height: 0.5px; width: 50px; text-align: center;">
+
+                    </div>
+                    
+                    <button class="btn btn-outline-primary mt-4 mb-2 col-12">
+                        <a class="text-decoration-none text-black" href="{% url 'registrarse' %}">    
+                            Registrarse
+                        </a>
+                    </button>
+        </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

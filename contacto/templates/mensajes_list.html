@@ -1,0 +1,47 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+
+<div class="container d-flex flex-wrap">
+
+    {% if mensajes %}
+
+    {% for mensaje in mensajes %}
+
+    <div class="d-flex flex-column col-md-6 col-6 p-3 rounded product-block escala">
+
+        <div class="card p-3">
+        <h3 class="serif">{{mensaje.asunto}}</h3>
+        <p>{{mensaje.mensaje}}</p>
+
+        
+        <ul class="list-unstyled">
+            <li><i class="fa-solid fa-user me-2"></i> {{mensaje.nombre}}</li>
+            <li><i class="fa-solid fa-envelope me-2"></i> {{mensaje.email}}</li>
+        </ul>
+
+            <div>
+
+                <button class="btn btn-primary">
+                    <a class="text-decoration-none text-white" href="{% url 'mensajeEliminar' mensaje.id %}">Eliminar</a>
+                </button>
+
+                <button class="btn btn-primary me-2">
+                    <a class="text-decoration-none text-white" href="{% url 'mensajeLeer' mensaje.id %}">Leer más</a>
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+    {% endfor %}
+
+    {%else%}
+
+    <h1>no hay mensajes</h1>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

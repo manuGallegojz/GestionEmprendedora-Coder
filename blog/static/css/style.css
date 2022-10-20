@@ -1,0 +1,243 @@
+@charset "UTF-8";
+/*variables*/
+/*fuentes*/
+/*tamaños*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+/*estructura_de_la_pagina*/
+body {
+  color: #3c4858; }
+
+/*tipografias*/
+.serif {
+  font-family: "Roboto Slab", serif; }
+
+.sanserif {
+  font-family: "Roboto"; }
+
+.rosa {
+  color: #FFC4BA; }
+
+.verde {
+  color: #75ccbb; }
+
+/*background color*/
+
+.bg-verde {
+  background-color: #75ccbb; }
+
+.bg-rosa {
+  color: #FFC4BA; }
+
+/*funcionalidades*/
+
+
+.escala{
+  transition: transform 0.5s;
+}
+
+.escala:hover{
+  transform: scale(1.01);
+}
+
+
+
+.sombraRosa:hover{
+  box-shadow: 0 1px 3px 0 #FFC4BA, 0 2px 8px 0 #FFC4BA;
+  transition: 0.5s;
+}
+
+.sombraRosa:not( :hover ){
+  transition: 0.3s;
+}
+
+.sombraVerde:hover{
+  box-shadow: 0 1px 3px 0 #75ccbb, 0 2px 8px 0 #75ccbb;
+  transition: 0.5s;
+}
+
+.sombraVerde:not( :hover ){
+  transition: 0.3s;
+}
+
+
+
+/*--------------------inicio--------------------*/
+/*---------------imagenes---------------*/
+.header-imagen {
+  background-image: url(../imagenes/header-imagen.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.fondo_encontranos {
+  background-image: url(../imagenes/fondo_encontranos.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.quienes-somos {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/quienes-somos.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black; }
+
+.cafe-virtual {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/cafe-virtual.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black; }
+
+.opacidad:hover {
+  opacity: 0.7;
+  transition: opacity 150ms ease-in 20ms; }
+
+.opacidad:not(:hover) {
+  opacity: 1;
+  transition: opacity 150ms ease-in 20ms; }
+
+.imagenItems{
+  transition: transform 0.5s;
+}
+
+.imagenItems:hover{
+    transform: scale(1.05) rotate(-5deg);
+}
+
+/*---------------header---------------*/
+.mostrar_logo {
+  display: initial; }
+
+.navbar > .container-fluid {
+  display: initial; }
+
+.logo {
+  width: 200px; }
+
+.logo_02 {
+  width: 150px; }
+
+.mostrar {
+  display: none; }
+
+.icono, .logo_footer {
+  width: 54.54545px; }
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #75ccbb; }
+
+.nav-link {
+  color: #75ccbb; }
+  .nav-link:hover {
+    color: #63aa9c; }
+
+.transicion{
+    position: relative;
+    transition: transform 0.5s;
+  }
+  
+  .transicion:hover{
+      transform: scale(1.05);
+  }
+
+
+/*---------------footer---------------*/
+footer {
+  background-color: #323437; }
+
+.separador {
+  height: 1px;
+  background-color: #7a7a7a; }
+
+.instagram {
+  width: 30px; }
+
+/*--------------------servicios--------------------*/
+.btn-primary {
+  color: #fff;
+  background-color: #75ccbb;
+  border-color: #75ccbb; }
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #63aa9c;
+  border-color: #63aa9c; }
+
+.btn-outline-primary{
+  border-width: 2px;
+  border-color: #75ccbb; 
+  color: #75ccbb;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #75ccbb;
+  border-color: #75ccbb; }
+
+
+/*--------------------servicios--------------------*/
+.texto_servicios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+/*--------------------equipo--------------------*/
+.caras {
+  width: 150px; }
+
+.instagram_equipo {
+  width: 37.5px; }
+
+/*-----responsive-----*/
+@media screen and (max-width: 1024px) {
+  .logo {
+    width: 200px; }
+  .fondo_encontranos {
+    background-image: url(../imagenes/contacto-768-02.svg);
+    background-repeat: no-repeat;
+    background-size: cover; } }
+
+@media screen and (max-width: 768px) {
+  .mostrar_logo {
+    display: none; }
+  .header-imagen {
+    background-image: url(../imagenes/header-768-04.svg);
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .mostrar {
+    display: initial; }
+  .logo {
+    width: 100px; }
+  .fondo_encontranos {
+    background-image: url(../imagenes/contacto-02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .navbar > .container-fluid {
+    display: flex; } }
+
+@media screen and (max-width: 576px) {
+  .quienes-somos {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/quienes-somos.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    background-position: center; }
+  .cafe-virtual {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/cafe-virtual.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    background-position: center; }
+  .header-imagen {
+    background-image: url(../imagenes/header-03.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .mostrar {
+    display: initial; }
+  .logo {
+    width: 60px; }
+  .fondo_encontranos {
+    background-image: url("../imagenes/contacto-03.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; } }

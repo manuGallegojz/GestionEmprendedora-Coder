@@ -1,0 +1,159 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+
+<!----mapa_de_google---->
+
+<iframe class="mb-5" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d105048.0677090669!2d-58.50250900000001!3d-34.635704!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9b68fab95b5%3A0xbaf48a44b765c9eb!2sVilla%20Luro%2C%20CABA%2C%20Argentina!5e0!3m2!1ses!2sus!4v1631225416291!5m2!1ses!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+<!----contacto---->
+
+<section class="container">
+
+    <div class="row justify-content-center">
+
+    <div class="row">
+
+        <!----datos---->
+
+        <div class="col-lg-6 col-12 text-center text-lg-start mb-5 mb-md-5 mb-lg-0">
+
+            <!----telefono---->
+
+            <div class="col-12 mb-5 mb-lg-2">
+
+                    <div class="mb-4 me-lg-4 d-lg-inline float-lg-start">
+
+                        <img class="icono" src="{% static 'imagenes/telefono.png' %}">
+
+                        </div>
+
+                        <div class="d-lg-inline-block">
+
+                    <h4 class="serif verde">Teléfono</h4>
+                    
+                        <p class="sanserif">15-2406-3261</p>
+                        <p class="sanserif">11-2400-2703</p>
+    
+                    </div>
+
+            </div>
+
+            <!----direccion---->
+
+            <div class="col-12 mb-5 mb-lg-2">
+
+                <div class="mb-4 me-lg-4 d-lg-inline float-lg-start">
+
+                    <img class="icono" src="{% static 'imagenes/mapa.png' %}">
+
+                    </div>
+
+                    <div class="d-lg-inline-block">
+
+                <h4 class="serif rosa">Dirección</h4>
+                
+                    <p class="sanserif">Villa Luro, CABA, Argentina y</p>
+                    <p class="sanserif">Flores, CABA, Argentina</p>
+
+                    </div>
+
+            </div>
+                
+            <!----email---->
+
+            <div class="col-12 mb-5 mb-lg-0">
+
+                <div class="mb-4 me-lg-4 d-lg-inline float-lg-start">
+
+                <img class="icono" src="{% static 'imagenes/email.png' %}">
+
+                </div>
+
+                <div class="d-lg-inline-block">
+
+                <h4 class="serif verde">Email</h4>
+
+                    <p class="sanserif">emprendedoragestion@gmail.com</p>
+
+                </div>
+
+                </div>
+
+    </div>
+
+        <!----formulario_de_contacto---->
+
+    <div class="col-lg-6 col-12 sanserif">
+
+            <h4 class="serif">Mandanos un Mensaje</h4>
+
+        <form action="" method="post">
+            {% csrf_token %}
+
+            <div class="form-group">
+
+                {{formulario.as_p}}
+
+                <!-- <label for="nombre">Nombre:</label>
+                <input class="form-control" type="text" name="nombre" id="nombre">
+
+
+                <label for="email">Email:</label>
+                <input class="form-control" type="text" name="email" id="email">
+
+
+                <label for="asunto">Asunto:</label>
+                <input class="form-control" type="text" name="asunto" id="asunto">
+
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea class="form-control" name="mensaje" id="mensaje"></textarea> -->
+
+            </div>
+
+                <button type="submit"  class="btn btn-primary mt-3 mb-5">
+                    Enviar mensaje
+                </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- <form method="POST">
+    {% csrf_token %}
+
+    <label for="name">Nombre</label>
+    <input type="text" name="name" id="name"> <br> <br>
+
+    <label for="surname">Apellido</label>
+    <input type="text" name="surname" id="surname"> <br> <br>
+
+    <label for="user">Nombre de Usuario</label>
+    <input type="text" name="user" id="user"> <br> <br>
+
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email"> <br> <br>
+
+    <label for="pass">Contraseña</label>
+    <input type="text" name="pass" id="pass"> <br> <br>
+
+    <button>
+        Registrarse
+    </button>
+
+    {{formulario.as_p}}
+
+    <button type="submit">
+        Enviar mensaje
+    </button>
+
+</form> -->
+
+{% endblock %}

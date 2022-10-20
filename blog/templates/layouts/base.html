@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-----SEO----->
+
+        <title>Gestion Emprendedora - Estudio contable e impositivo - CABA, Argentina</title>
+        <meta name="description" content="Nos ocupamos de asesorarte en tu emprendimiento y te ayudamos a entender de forma más simple y llevadera la complejidad del mundo actual.">
+        <meta name="keywords" content="CONTABILIDAD, FINANZAS, COSTOS, TRÁMITES, IMPUESTOS, EMPRENDER, MUJERES CONTADORAS">
+        
+        <!----bootstrap---->
+
+        <link rel="stylesheet" href="{% static 'librerias/bootstrap/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'librerias/bootstrap/bootstrap-theme.min.css' %}">
+
+        <!----fontawsome---->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+        <!-----css----->
+
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        
+        <!-----fuentes----->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+        <!-----favicon----->
+
+        <link rel="icon" href="{% static 'imagenes/favicon.ico' %}" type="image/x-icon">
+        
+
+    </head>
+    <body>
+        
+        <!----header---->
+
+        <header class="header-imagen" id="encabezado">
+
+            <nav class="contnavar navbar navbar-expand-lg navbar-expand-md flex-md-row p-0"> 
+
+                <div class="container-fluid text-lg-center text-md-center">
+
+                    <!----logotipo---->
+
+                        <a class="navbar-brand ms-4 ms-sm-4" href="/"><img class="mostrar_logo logo mt-4 mb-4 escala" src="{% static 'imagenes/logo_para_web-02.png' %}"><img class="d-lg-none d-md-none logo_02 mt-4 mb-4" src="{% static 'imagenes/logo_para_web_03.png' %}"></a>
+
+                    <!----links_de_navegacion---->
+
+                            <div class="mostrar me-4">
+
+                                <button class="navbar-expand-sm btn btn-primary me-sm-4 ms-sm-4 navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                                    
+                                    <span class="navbar-toggler-icon"></span>
+
+                                </button>
+
+                            </div>
+
+                            <div class="collapse navbar-collapse justify-content-lg-center justify-content-md-center" id="collapsibleNavbar">
+
+                                <ul class="navbar-nav serif mb-4 mb-lg-2 ms-4 ms-lg-0 d-flex align-items-center">
+
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'sobreNosotras' %}">Sobre Nosotras</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'paginas' %}">Blog</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'contacto' %}">Contacto</a></li>
+
+                                    {% if user.is_authenticated %}
+                                    <li class="nav-item d-flex border px-2 py-1 justify-content-center bg-verde escala ms-2" style="border-radius: 40px;">
+
+                                        <a class="d-flex align-items-center text-decoration-none px-2 py-1" href="{% url 'perfil' %}">
+
+                                            <div class="text-white me-2 d-inline">{{user.username}}</div>
+                                        
+                                            {% with user.avatar_set.first as avatar %}
+
+                                            {% if avatar %}
+
+                                            <img src="{{avatar.imagen.url}}" alt="Imagen" class="rounded-circle" style="width: 35px; height: 35px; ">
+
+                                            {% else %}
+
+                                            <img src="{% static 'media/avatar/Alberto-Echeverria.jpg' %}" alt="Imagen" class="rounded-circle" style="width: 35px; height: 35px; ">
+
+                                            {% endif %}
+
+                                            {% endwith %}
+
+                                        </a>
+
+                                    </li>
+
+                                    {% else %}
+
+                                    <li class="nav-item d-flex border px-2 py-1 justify-content-center bg-verde escala" style="border-radius: 40px;"><a class="nav-link text-white me-1" href="{% url 'login' %}">Iniciar Sesión</a></li>
+
+                                    {% endif %}
+
+                                </ul>
+
+                            </div>
+
+                </div>
+
+            </nav>
+
+        </header>
+
+        <!----body---->
+
+        {% block content %}
+        {% endblock %}
+
+
+            <!----footer---->
+
+        <footer class="container-fluid p-4">
+
+            <div class="flex row text-center justify-content-center">
+
+                <div class="col-3">
+
+                    <div class="contenedor_logo_footer">
+
+                        <a href="#encabezado"><img class="logo_footer" src="{% static 'imagenes/logo_para_footer.png' %}"></a>
+                
+                    </div>
+
+
+                        <nav class="navbar-nav flex"> 
+                                
+                                <div class="row text-center justify-content-center">
+
+                                <ul class="nav sanserif text-white justify-content-evenly">
+                                    <li class="nav-item p-1"><a class="nav-link" href="{% url 'sobreNosotras' %}">Sobre Nosotras</a></li>
+                                    <li class="nav-item p-1"><a class="nav-link" href="{% url 'paginas' %}">Blog</a></li>
+                                    <li class="nav-item p-1"><a class="nav-link" href="{% url 'contacto' %}">Contacto</a></li>
+                                </ul>
+
+                            </div>
+
+                        </nav>
+
+                    <div class="separador justify-content-center"></div>
+
+                    <div class="contenedor_logo_footer mt-3">
+
+                        <a href="https://www.instagram.com/gestion.emprendedora/" target="_blank"><img src="{% static 'imagenes/instagram_gris.svg' %}" class="instagram"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+        <!-- <script src="{% static 'js/bootstrap.min.js' %}"></script> -->
+
+    </body>
+</html>

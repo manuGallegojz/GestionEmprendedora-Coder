@@ -1,0 +1,24 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+
+<div class="container mt-5 mb-5">
+    <div class="card">
+        <div class="card-body">
+            <h3>{{mensaje.asunto}}</h3>
+            <p>{{mensaje.mensaje}}</p>
+            <ul class="list-unstyled">
+                <li><i class="fa-solid fa-user me-2"></i> {{mensaje.nombre}}</li>
+                <li><i class="fa-solid fa-envelope me-2"></i> {{mensaje.email}}</li>
+            </ul>
+            <button class="btn btn-primary">
+                <a class="text-decoration-none text-white" href="{% url 'mensajeEliminar' mensaje.id %}">Eliminar</a>
+            </button>
+
+            <button class="btn btn-primary">
+                <a class="text-decoration-none text-white" href="{% url 'misMensajes' %}">Volver atrás</a>
+            </button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

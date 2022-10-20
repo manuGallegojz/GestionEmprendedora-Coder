@@ -1,0 +1,30 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+
+<div class="container d-flex justify-content-center my-3">
+    <div class="col-5 p-3">
+        <div class=" p-3">
+            <div class="col-12 sanserif">
+
+                <form action="/accounts/login" method="POST">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+
+                        {{formulario.as_p}}
+
+                    </div>
+
+                    <button class="btn btn-primary mt-3 mb-2 col-12">
+                        Registrarse
+                    </button>
+                    
+                    
+                </form>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

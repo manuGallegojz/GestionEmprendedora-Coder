@@ -1,0 +1,77 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+
+<main>
+
+    <section class="container mb-5">
+
+        <div class="row text-center mt-5 pe-5 ps-5 p-lg-0 d-flex justify-content-evenly">
+
+            <!----primer_miembro---->
+            
+            <div class="col-12 col-lg-4 mb-5 mb-lg-0">
+
+                <div class="mb-4">
+
+                    <img class="caras" src="{% static 'imagenes/camila.png' %}">
+
+                </div>
+
+                <div class="mt-3">
+
+                    <h5 class="serif">Camila Gallego</h5>
+
+                        <p class="sanserif">Aunque se asocie nuestra formación con la contabilidad per se, me enfoqué en el sector impositivo. Disfruto las charlas con clientes en total confianza (y un café de por medio)</p>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div>
+
+                    <a href="https://www.instagram.com/camimgallego/" class="d-inline-block me-2"><img src="{% static 'imagenes/instagram.svg' %}" class="instagram_equipo"></a>
+                    <a href="https://www.linkedin.com/in/camila-gallego-juiz-49966488/" class="d-inline-block ms-2"><img src="{% static 'imagenes/linkedin.svg' %}" class="instagram_equipo"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!----segundo_miembro---->
+            
+            <div class="col-12 col-lg-4">
+
+                <div class="mb-4">
+
+                    <img class="caras" src="{% static 'imagenes/yani.png' %}">
+
+                </div>
+
+                <div class="mt-3">
+
+                    <h5 class="serif">Yanina Bruschi</h5>
+
+                        <p class="sanserif">Cuando te recibís de contador las ramas para dedicarte son muchas… pero los impuestos tienen un no sé qué, que hacen que la profesión sea más linda (muchos dirán que estoy loca!). Nada más gratificante que ver al cliente contento después de un trabajo realizado.</p>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div>
+
+                    <a href="https://www.instagram.com/yanibruschi/" class="d-inline-block me-2"><img src="{% static 'imagenes/instagram.svg' %}" class="instagram_equipo"></a>
+                    <a href="https://www.linkedin.com/in/yanina-bruschi-56b007193/" class="d-inline-block ms-2"><img src="{% static 'imagenes/linkedin.svg' %}" class="instagram_equipo"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+</main>
+{% endblock %}
