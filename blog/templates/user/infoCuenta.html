@@ -11,11 +11,11 @@
 
                 {% if avatar %}
 
-                <img class="w-75 rounded-circle" src="{{avatar.imagen.url}}" alt="imagen de perfil">
+                <img class="rounded-circle" style="width: 75%; height: 75%;" src="{{avatar.imagen.url}}" alt="imagen de perfil">
 
                 {% else %}
 
-                <img class="w-75 rounded-circle" src="{% static '/media/avatar/Alberto-Echeverria.jpg' %}" alt="imagen de perfil">
+                <img class="w-75 rounded-circle" src="/media/avatar/Alberto-Echeverria.jpg" alt="imagen de perfil">
 
                 {% endif %}
 

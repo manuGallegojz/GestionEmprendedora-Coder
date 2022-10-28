@@ -6,8 +6,8 @@ from .models import *
 class EditarUsuario(UserCreationForm):
 
     email = forms.EmailField(widget=forms.TextInput(attrs={'class': 'form-control sanserif'}))
-    first_name = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control sanserif'}))
-    last_name = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control sanserif'}))
+    first_name = forms.CharField(label = "Nombre",widget=forms.TextInput(attrs={'class': 'form-control sanserif'}))
+    last_name = forms.CharField(label = "Apellido",widget=forms.TextInput(attrs={'class': 'form-control sanserif'}))
     password1 = forms.CharField(label = "Contraseña", widget=forms.PasswordInput(attrs={'class': 'form-control sanserif'}))
     password2 = forms.CharField(label = "Repetir la contraseña", widget=forms.PasswordInput(attrs={'class': 'form-control sanserif'}))
 
